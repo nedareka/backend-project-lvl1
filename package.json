@@ -1,0 +1,22 @@
+{
+  "name": "backend-project-lvl1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/bin/brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "./src/bin/brain-games.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nedareka/backend-project-lvl1.git"
+  },
+  "author": "nedareka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nedareka/backend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/nedareka/backend-project-lvl1#readme"
+}
