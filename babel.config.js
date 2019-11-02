@@ -1,11 +1,11 @@
-module.exports = function (api) {
+module.exports = (api) => {
   api.cache(true);
 
   const presets = [
     ['@babel/preset-env',
       {
         targets: {
-          node: 'current'
+          node: 'current',
         },
       },
     ],
@@ -14,6 +14,6 @@ module.exports = function (api) {
 
   return {
     presets,
-    plugins
+    plugins,
   };
-}
+};
