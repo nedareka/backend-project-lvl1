@@ -7,7 +7,6 @@ const greeting = () => {
 
 const getName = () => {
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
   return name;
 };
 
@@ -22,8 +21,12 @@ const ifEven = (n) => {
   return false;
 };
 
-const answRight = (num) => {
+const getAnsw = () => {
   const ans = readlineSync.question('Your answer: ');
+  return ans;
+};
+
+const answRight = (num, ans) => {
   if ((ifEven(num) && (ans === 'yes')) || (!ifEven(num) && (ans === 'no'))) {
     return true;
   }
@@ -31,5 +34,5 @@ const answRight = (num) => {
 };
 
 export {
-  greeting, getName, getRandInteger, ifEven, answRight,
+  greeting, getName, getRandInteger, ifEven, getAnsw, answRight,
 };
