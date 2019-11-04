@@ -12,18 +12,20 @@ for (let i = 1; i <= 3; i += 1) {
   const num = getRandInteger();
   console.log(`Question: ${num}`);
   const ans = getAnsw();
-  if (answRight(num, ans)) {
-    console.log('Correct!');
-    if (i === 3) {
-      console.log(`Congratulations, ${name}`);
+
+  let key = 'no';
+
+  if (!answRight(num, ans)) {
+    if (ifEven(num)) {
+      key = 'yes';
     }
-  } else if (ifEven(num)) {
-    console.log(`"${ans}" is wrong answer ;(. Correct answer was "yes".`);
+    console.log(`"${ans}" is the wrong answer ;(. The correct answer was "${key}".`);
     console.log(`Let's try again, ${name}!`);
     break;
-  } else {
-    console.log(`"${ans}" is wrong answer ;(. Correct answer was "no".`);
-    console.log(`Let's try again, ${name}!`);
-    break;
+  }
+
+  console.log('Correct!');
+  if (i === 3) {
+    console.log(`Congratulations, ${name}`);
   }
 }
