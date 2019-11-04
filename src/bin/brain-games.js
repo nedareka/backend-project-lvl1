@@ -2,4 +2,5 @@
 import { greeting, getName } from '..';
 
 greeting();
-getName();
+const name = getName();
+console.log(`Hello, ${name}!`);
