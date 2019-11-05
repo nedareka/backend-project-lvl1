@@ -2,7 +2,7 @@
   "name": "backend-project-lvl1",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/bin/brain-games.js",
+  "main": "./src/bin/games/brain-games.js",
   "files": [
     "dist"
   ],
@@ -12,8 +12,9 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-games": "dist/bin/games/brain-games.js",
+    "brain-even": "dist/bin/games/brain-even.js",
+    "brain-calc": "dist/bin/games/brain-calc.js"
   },
   "repository": {
     "type": "git",
