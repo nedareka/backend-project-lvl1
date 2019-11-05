@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import {
-  greeting, getName, getRandInteger, ifEven, getAnsw, answRight,
-} from '..';
+  greeting, getName, getRandInteger, ifEven, getAnsw, answRight, hello,
+} from '../..';
 
 greeting();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const name = getName();
-console.log(`Hello, ${name}!`);
+hello(name);
 
 for (let i = 1; i <= 3; i += 1) {
   const num = getRandInteger();

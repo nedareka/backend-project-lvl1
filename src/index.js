@@ -1,8 +1,11 @@
 import readlineSync from 'readline-sync';
 
-
 const greeting = () => {
-  console.log('Welcome to the Brain Games');
+  console.log('Welcome to the Brain Games!');
+};
+
+const hello = (name) => {
+  console.log(`Hello, ${name}`);
 };
 
 const getName = () => {
@@ -34,5 +37,5 @@ const answRight = (num, ans) => {
 };
 
 export {
-  greeting, getName, getRandInteger, ifEven, getAnsw, answRight,
+  greeting, hello, getName, getRandInteger, ifEven, getAnsw, answRight,
 };

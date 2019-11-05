@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { greeting, getName } from '..';
+import { greeting, getName, hello } from '../..';
 
 greeting();
 const name = getName();
-console.log(`Hello, ${name}!`);
+hello(name);
