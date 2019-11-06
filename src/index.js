@@ -13,13 +13,13 @@ const getName = () => {
   return name;
 };
 
-const getRandom = (min, max) => (
+const getRandInt = (min, max) => (
   Math.floor(Math.random() * (max - min + 1)) + min
 );
 
 const getRandSign = () => {
   let sign = '';
-  switch (getRandom(1, 3)) {
+  switch (getRandInt(1, 3)) {
     case 1:
       sign = '+';
       break;
@@ -34,8 +34,6 @@ const getRandSign = () => {
   }
   return sign;
 };
-
-const getRandInteger = () => getRandom(1, 100);
 
 const ifEven = (n) => {
   if (n % 2 === 0) return true;
@@ -80,7 +78,7 @@ const divisor = (a, b) => {
 };
 
 export {
-  greeting, hello, getName, getRandInteger, ifEven, getAnsw, answRight,
+  greeting, hello, getName, getRandInt, ifEven, getAnsw, answRight,
   getRandSign, printWrong, printRight, divisor,
 
 };

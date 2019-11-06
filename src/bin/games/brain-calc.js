@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
-  greeting, getName, getRandInteger, getAnsw, hello, getRandSign, printWrong,
+  greeting, getName, getRandInt, getAnsw, hello, getRandSign, printWrong,
   printRight,
 } from '../..';
 
@@ -8,10 +8,12 @@ greeting();
 console.log('What is the result of the expression?');
 const name = getName();
 hello(name);
+const startInt = 1;
+const endInt = 100;
 
 for (let i = 1; i <= 3; i += 1) {
-  const num1 = getRandInteger();
-  const num2 = getRandInteger();
+  const num1 = getRandInt(startInt, endInt);
+  const num2 = getRandInt(startInt, endInt);
   const sign = getRandSign();
   let result;
   console.log(`Question: ${num1} ${sign} ${num2}`);
