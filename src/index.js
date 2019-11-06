@@ -66,8 +66,21 @@ const printRight = (i, name) => {
   }
 };
 
+const divisor = (a, b) => {
+  const nmax = Math.max(a, b);
+  const nmin = Math.min(a, b);
+
+  const devisorNorm = (max, min) => {
+    if (max % min === 0) {
+      return min;
+    }
+    return devisorNorm(min, max % min);
+  };
+  return devisorNorm(nmax, nmin);
+};
+
 export {
   greeting, hello, getName, getRandInteger, ifEven, getAnsw, answRight,
-  getRandSign, printWrong, printRight,
+  getRandSign, printWrong, printRight, divisor,
 
 };
