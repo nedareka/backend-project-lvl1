@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import {
   greeting, getName, getRandInt, getAnsw, hello, getRandSign, printWrong,
-  printRight,
+  printRight, getCalcRes,
 } from '../..';
 
 greeting();
@@ -15,22 +15,10 @@ for (let i = 1; i <= 3; i += 1) {
   const num1 = getRandInt(startInt, endInt);
   const num2 = getRandInt(startInt, endInt);
   const sign = getRandSign();
-  let result;
+  // let result;
   console.log(`Question: ${num1} ${sign} ${num2}`);
 
-  switch (sign) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
-    default:
-      console.log('Something went wrong');
-  }
+  const result = getCalcRes(num1, num2, sign);
 
   const ans = Number(getAnsw());
   if (ans !== result) {
