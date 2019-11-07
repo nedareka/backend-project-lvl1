@@ -19,9 +19,9 @@ for (let i = 1; i <= 3; i += 1) {
   const empty = getRandInt(1, elem);
   const seq = makeSeq(firstNum, diff, elem);
   printQuest(seq, empty);
-  const ans = Number(getAnsw());
+  const ans = getAnsw();
   const emptyVal = seq[empty - 1];
-  if (ans !== emptyVal) {
+  if (Number(ans) !== emptyVal) {
     printWrong(ans, emptyVal, name);
     break;
   }
