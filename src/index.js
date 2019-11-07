@@ -35,6 +35,19 @@ const getRandSign = () => {
   return sign;
 };
 
+const getCalcRes = (num1, num2, sign) => {
+  switch (sign) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return console.log('Something went wrong');
+  }
+};
+
 const ifEven = (n) => {
   if (n % 2 === 0) return true;
   return false;
@@ -77,8 +90,28 @@ const divisor = (a, b) => {
   return devisorNorm(nmax, nmin);
 };
 
+const makeSeq = (firstNum, diff, elem) => {
+  const s = [];
+  for (let i = 0; i < elem; i += 1) {
+    s[i] = firstNum + i * diff;
+  }
+  return s;
+};
+
+const printQuest = (seq, empty) => {
+  let str = '';
+  for (let i = 0; i < seq.length; i += 1) {
+    if (i === empty - 1) {
+      str += ' ..';
+    } else {
+      str += ` ${seq[i]}`;
+    }
+  }
+  return console.log(`Question:${str}`);
+};
+
 export {
   greeting, hello, getName, getRandInt, ifEven, getAnsw, answRight,
-  getRandSign, printWrong, printRight, divisor,
-
+  getRandSign, printWrong, printRight, divisor, makeSeq, printQuest,
+  getCalcRes,
 };
