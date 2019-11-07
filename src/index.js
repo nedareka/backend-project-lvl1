@@ -110,8 +110,33 @@ const printQuest = (seq, empty) => {
   return console.log(`Question:${str}`);
 };
 
+const isPrime = (num) => {
+  const divMax = Math.floor(Math.sqrt(num));
+  if (num === 1) {
+    return false;
+  }
+  if (num === 2) {
+    return true;
+  }
+
+  for (let div = 2; div <= divMax; div += 1) {
+    if (num % div === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const answRightPrime = (num, ans) => {
+  if ((isPrime(num) && (ans === 'yes')) || (!isPrime(num) && (ans === 'no'))) {
+    return true;
+  }
+  return false;
+};
+
+
 export {
   greeting, hello, getName, getRandInt, ifEven, getAnsw, answRight,
   getRandSign, printWrong, printRight, divisor, makeSeq, printQuest,
-  getCalcRes,
+  getCalcRes, isPrime, answRightPrime,
 };

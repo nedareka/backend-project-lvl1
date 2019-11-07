@@ -22,3 +22,6 @@ brain-gcd:
 brain-progression:
 	npx babel-node src/bin/games/brain-progression.js
 
+brain-prime:
+	npx babel-node src/bin/games/brain-prime.js
+
