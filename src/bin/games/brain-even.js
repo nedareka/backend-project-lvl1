@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
-  greeting, getName, getRandInt, ifEven, getAnsw, answRight, hello,
+  greeting, getName, getRandInt, isEven, getAnsw, answRight, hello,
   printWrong, printRight,
 } from '../..';
 
@@ -19,7 +19,7 @@ for (let i = 1; i <= 3; i += 1) {
   let key = 'no';
 
   if (!answRight(num, ans)) {
-    if (ifEven(num)) {
+    if (isEven(num)) {
       key = 'yes';
     }
     printWrong(ans, key, name);

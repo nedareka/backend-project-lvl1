@@ -15,7 +15,6 @@ for (let i = 1; i <= 3; i += 1) {
   const num1 = getRandInt(startInt, endInt);
   const num2 = getRandInt(startInt, endInt);
   const sign = getRandSign();
-  // let result;
   console.log(`Question: ${num1} ${sign} ${num2}`);
 
   const result = getCalcRes(num1, num2, sign);
