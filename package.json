@@ -1,7 +1,13 @@
 {
   "name": "backend-project-lvl1",
   "version": "1.0.0",
-  "description": "",
+  "description": "The simple games for pastime",
+  "keywords": [
+    "games",
+    "mathematics",
+    "programming",
+    "first steps"
+  ],
   "main": "./src/bin/games/brain-games.js",
   "files": [
     "dist"
