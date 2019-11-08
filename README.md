@@ -21,7 +21,7 @@ And one more game in this bundle. This time it is about progression
 
 [![asciicast](https://asciinema.org/a/JuIPLx3oaYj2LvWHnb8GbUX5W.svg)](https://asciinema.org/a/JuIPLx3oaYj2LvWHnb8GbUX5W)
 
-And last but not least game - prime numbers! Let's play!
+And the last but not least game - prime numbers! Let's play!
 
 [![asciicast](https://asciinema.org/a/zOpvaOR2tU6KrdRRXVf2U0thC.svg)](https://asciinema.org/a/zOpvaOR2tU6KrdRRXVf2U0thC)
 
