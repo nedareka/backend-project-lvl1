@@ -15,11 +15,12 @@ for (let i = 1; i <= 3; i += 1) {
   const num = getRandInt(startInt, endInt);
   console.log(`Question: ${num}`);
   const ans = getAnsw();
+  const even = isEven(num);
 
   let key = 'no';
 
-  if (!answRight(num, ans)) {
-    if (isEven(num)) {
+  if (!answRight(ans, even)) {
+    if (even) {
       key = 'yes';
     }
     printWrong(ans, key, name);

@@ -58,8 +58,8 @@ const getAnsw = () => {
   return ans;
 };
 
-const answRight = (num, ans) => {
-  if ((isEven(num) && (ans === 'yes')) || (!isEven(num) && (ans === 'no'))) {
+const answRight = (ans, OK) => {
+  if ((OK && (ans === 'yes')) || (!OK && (ans === 'no'))) {
     return true;
   }
   return false;
@@ -127,16 +127,16 @@ const isPrime = (num) => {
   return true;
 };
 
-const answRightPrime = (num, ans) => {
-  if ((isPrime(num) && (ans === 'yes')) || (!isPrime(num) && (ans === 'no'))) {
-    return true;
-  }
-  return false;
-};
+// const answRightPrime = (num, ans) => {
+//   if ((isPrime(num) && (ans === 'yes')) || (!isPrime(num) && (ans === 'no'))) {
+//     return true;
+//   }
+//   return false;
+// };
 
 
 export {
   greeting, hello, getName, getRandInt, isEven, getAnsw, answRight,
   getRandSign, printWrong, printRight, divisor, makeSeq, printQuest,
-  getCalcRes, isPrime, answRightPrime,
+  getCalcRes, isPrime,
 };
