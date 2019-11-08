@@ -13,9 +13,9 @@ const endInt = 100;
 
 for (let i = 1; i <= 3; i += 1) {
   const num = getRandInt(startInt, endInt);
+  const prime = isPrime(num);
   console.log(`Question: ${num}`);
   const ans = getAnsw();
-  const prime = isPrime(num);
 
   let key = 'no';
 
