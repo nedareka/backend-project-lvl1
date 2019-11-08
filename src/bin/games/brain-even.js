@@ -10,8 +10,9 @@ const name = getName();
 hello(name);
 const startInt = 1;
 const endInt = 100;
+const cycles = 3;
 
-for (let i = 1; i <= 3; i += 1) {
+for (let i = 0; i < cycles; i += 1) {
   const num = getRandInt(startInt, endInt);
   console.log(`Question: ${num}`);
   const ans = getAnsw();
@@ -27,5 +28,5 @@ for (let i = 1; i <= 3; i += 1) {
     break;
   }
 
-  printRight(i, name);
+  printRight((i === cycles - 1), name);
 }

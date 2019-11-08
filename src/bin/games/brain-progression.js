@@ -12,8 +12,9 @@ const startInt = 1;
 const endInt = 10;
 const endDiff = 10;
 const elem = 10;
+const cycles = 3;
 
-for (let i = 1; i <= 3; i += 1) {
+for (let i = 0; i < cycles; i += 1) {
   const firstNum = getRandInt(startInt, endInt);
   const diff = getRandInt(1, endDiff);
   const empty = getRandInt(1, elem);
@@ -25,6 +26,5 @@ for (let i = 1; i <= 3; i += 1) {
     printWrong(ans, emptyVal, name);
     break;
   }
-
-  printRight(i, name);
+  printRight((i === cycles - 1), name);
 }

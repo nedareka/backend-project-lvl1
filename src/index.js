@@ -70,9 +70,9 @@ const printWrong = (wrong, right, name) => {
   console.log(`Let's try again, ${name}!`);
 };
 
-const printRight = (i, name) => {
+const printRight = (end, name) => {
   console.log('Correct!');
-  if (i === 3) {
+  if (end) {
     console.log(`Congratulations, ${name}`);
   }
 };
