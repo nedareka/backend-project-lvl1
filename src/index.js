@@ -58,8 +58,8 @@ const getAnsw = () => {
   return ans;
 };
 
-const answRight = (ans, OK) => {
-  if ((OK && (ans === 'yes')) || (!OK && (ans === 'no'))) {
+const answRight = (ans, isOk) => {
+  if ((isOk && (ans === 'yes')) || (!isOk && (ans === 'no'))) {
     return true;
   }
   return false;
@@ -150,8 +150,8 @@ const brainCalc = () => {
 
     const result = getCalcRes(num1, num2, sign);
 
-    const ans = Number(getAnsw());
-    if (ans !== result) {
+    const ans = getAnsw();
+    if (Number(ans) !== result) {
       printWrong(ans, result, name);
       break;
     }
@@ -189,8 +189,88 @@ const brainEven = () => {
   }
 };
 
+const brainGcd = () => {
+  greeting();
+  console.log('Find the greatest common divisor of given numbers.');
+  const name = getName();
+  hello(name);
+  const startInt = 1;
+  const endInt = 100;
+  const cycles = 3;
+
+  for (let i = 0; i < cycles; i += 1) {
+    const num1 = getRandInt(startInt, endInt);
+    const num2 = getRandInt(startInt, endInt);
+    const gcd = divisor(num1, num2);
+    console.log(`Question: ${num1} ${num2}`);
+    const ans = getAnsw();
+
+    if (Number(ans) !== gcd) {
+      printWrong(ans, gcd, name);
+      break;
+    }
+
+    printRight((i === cycles - 1), name);
+  }
+};
+
+const brainPrime = () => {
+  greeting();
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const name = getName();
+  hello(name);
+  const startInt = 1;
+  const endInt = 100;
+  const cycles = 3;
+
+  for (let i = 0; i < cycles; i += 1) {
+    const num = getRandInt(startInt, endInt);
+    const prime = isPrime(num);
+    console.log(`Question: ${num}`);
+    const ans = getAnsw();
+
+    let key = 'no';
+
+    if (!answRight(ans, prime)) {
+      if (prime) {
+        key = 'yes';
+      }
+      printWrong(ans, key, name);
+      break;
+    }
+
+    printRight((i === cycles - 1), name);
+  }
+};
+
+const brainProgression = () => {
+  greeting();
+  console.log('What number is missed in the progression?');
+  const name = getName();
+  hello(name);
+  const startInt = 1;
+  const endInt = 10;
+  const endDiff = 10;
+  const elem = 10;
+  const cycles = 3;
+
+  for (let i = 0; i < cycles; i += 1) {
+    const firstNum = getRandInt(startInt, endInt);
+    const diff = getRandInt(1, endDiff);
+    const empty = getRandInt(1, elem);
+    const seq = makeSeq(firstNum, diff, elem);
+    printQuest(seq, empty);
+    const ans = getAnsw();
+    const emptyVal = seq[empty - 1];
+    if (Number(ans) !== emptyVal) {
+      printWrong(ans, emptyVal, name);
+      break;
+    }
+    printRight((i === cycles - 1), name);
+  }
+};
+
 export {
-  greeting, hello, getName, getRandInt, isEven, getAnsw, answRight,
-  getRandSign, printWrong, printRight, divisor, makeSeq, printQuest,
-  getCalcRes, isPrime, brainCalc, brainGames,
+  brainCalc, brainGames, brainGcd, brainPrime, brainProgression,
+  brainEven,
 };
