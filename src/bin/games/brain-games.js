@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { greeting, getName, hello } from '../..';
+import {
+  brainGames,
+} from '../..';
 
-greeting();
-const name = getName();
-hello(name);
+brainGames();

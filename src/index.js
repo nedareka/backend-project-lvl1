@@ -127,6 +127,12 @@ const isPrime = (num) => {
   return true;
 };
 
+const brainGames = () => {
+  greeting();
+  const name = getName();
+  hello(name);
+};
+
 const brainCalc = () => {
   greeting();
   console.log('What is the result of the expression?');
@@ -186,5 +192,5 @@ const brainEven = () => {
 export {
   greeting, hello, getName, getRandInt, isEven, getAnsw, answRight,
   getRandSign, printWrong, printRight, divisor, makeSeq, printQuest,
-  getCalcRes, isPrime, brainCalc, brainEven,
+  getCalcRes, isPrime, brainCalc, brainGames,
 };
